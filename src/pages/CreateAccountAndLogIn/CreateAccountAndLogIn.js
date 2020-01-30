@@ -3,22 +3,14 @@ import {View, Text, StyleSheet} from 'react-native';
 import Logo from '../../component/logo/Logo';
 import AppName from '../../component/appName/AppName';
 import ButtonComponent from '../../component/button/Button';
-
-const handleCreateAccount = () => {
-  alert('this is the registeration button');
-};
-
-const handleLogin = () => {
-  alert('this is the Login button');
-};
+import TaxintAndLogo from '../../component/TaxintAndLogo/TaxintAndLogo';
 
 const CreateAccountAndLogIn = () => {
   return (
     <View style={styles.ContainerForCreateAccountAndLogIn}>
       <View style={styles.body}>
         <View style={styles.firstSection}>
-          <AppName />
-          <Logo height={100} width={100} borderRadius={20} />
+          <TaxintAndLogo />
         </View>
         <View style={styles.secondSection}>
           <Text style={styles.subText}>See how much you spend on taxes</Text>
@@ -30,11 +22,8 @@ const CreateAccountAndLogIn = () => {
           </Text>
         </View>
         <View style={styles.buttons}>
-          <ButtonComponent
-            title="Create Account"
-            onPress={handleCreateAccount}
-          />
-          <ButtonComponent title="Login" onPress={handleLogin} />
+          <ButtonComponent title="Create Account" color={'#A55967'} />
+          <ButtonComponent title="Login" color={'#A55967'} />
         </View>
       </View>
     </View>

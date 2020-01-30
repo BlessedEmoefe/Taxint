@@ -1,7 +1,7 @@
 ## colors
 
 primary- #1E1113
-secondary- #81B7DB
-other- #A55967
+secondary- #A55967
+other- #81B7DB
 
 font-family: 'Merriweather Sans', sans-serif;
