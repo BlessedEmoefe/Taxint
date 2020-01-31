@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import TaxintAndLogo from '../../component/TaxintAndLogo/TaxintAndLogo';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import Input from '../../component/input/Input';
 import ButtonComponent from '../../component/button/Button';
 import BottomComponent from '../../component/BottomComponent/BottomComponent';
@@ -21,7 +23,12 @@ class SignIn extends Component {
             //  value={}
             //  onChangeText={}
           />
-          <ButtonComponent title="Login" />
+          <ButtonComponent
+            title="Login"
+            onPress={() => {
+              this.props.navigation.navigate('LandingPage');
+            }}
+          />
           <Text style={styles.subtext}>
             Forgot your login details? Create Account
           </Text>

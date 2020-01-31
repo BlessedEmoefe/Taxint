@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "92592518833",
+    "firebase_url": "https://taxint-10e9f.firebaseio.com",
+    "project_id": "taxint-10e9f",
+    "storage_bucket": "taxint-10e9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92592518833:android:5366eddd9ffae4b56b1490",
+        "android_client_info": {
+          "package_name": "com.ITechTerrain.Taxint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92592518833-mtgagfbf7nnlka5m1j8krjphofkpe4fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_kE32gaEJYeZNTOulee8dx2Eov3zBgGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92592518833-mtgagfbf7nnlka5m1j8krjphofkpe4fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

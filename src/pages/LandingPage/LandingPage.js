@@ -2,11 +2,20 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Logo from '../../component/logo/Logo';
 import AppName from '../../component/appName/AppName';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 class LandingPage extends Component {
+  handleSwitchtoHome = () => {
+    setTimeout(() => {
+      this.props.navigation.navigate('CreateAccountAndLogIn');
+    }, 5000);
+  };
+
   render() {
     return (
       <View style={styles.container}>
+        {this.handleSwitchtoHome()}
         <AppName />
         <Text style={styles.subtext}>Helping you keep track of you Tax</Text>
         <View style={styles.LogoContainer}>
