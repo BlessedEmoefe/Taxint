@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableNativeFeedback} from 'react-native';
 import {white} from 'ansi-colors';
 
-const BottomComponent = ({text}) => (
-  <TouchableNativeFeedback onPress={null} style={styles.touch}>
+const BottomComponent = ({text, onPress}) => (
+  <TouchableNativeFeedback onPress={onPress} style={styles.touch}>
     <View style={styles.bottomContainer}>
       <Text style={styles.text}>{text}</Text>
     </View>

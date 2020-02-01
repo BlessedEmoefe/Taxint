@@ -8,6 +8,18 @@ import ButtonComponent from '../../component/button/Button';
 import BottomComponent from '../../component/BottomComponent/BottomComponent';
 
 class SignIn extends Component {
+  state = {
+    email: '',
+    password: '',
+  };
+
+  handleEmailChange = email => {
+    this.setState({email: email});
+  };
+  handlePasswordChange = password => {
+    this.setState({password: password});
+  };
+
   render() {
     return (
       <View style={styles.SignInPage}>
@@ -15,13 +27,13 @@ class SignIn extends Component {
           <TaxintAndLogo />
           <Input
             placeholder="Email"
-            // value={}
-            // onChangeText={}
+            value={this.state.email}
+            onChangeText={this.handleEmailChange}
           />
           <Input
             placeholder="Password"
-            //  value={}
-            //  onChangeText={}
+            value={this.state.password}
+            onChangeText={this.handlePasswordChange}
           />
           <ButtonComponent
             title="Login"
@@ -29,11 +41,20 @@ class SignIn extends Component {
               this.props.navigation.navigate('LandingPage');
             }}
           />
-          <Text style={styles.subtext}>
+          <Text
+            style={styles.subtext}
+            onPress={() => {
+              this.props.navigation.navigate('CreateAccount');
+            }}>
             Forgot your login details? Create Account
           </Text>
         </View>
-        <BottomComponent text="Don't have an account? Create Account" />
+        <BottomComponent
+          text="Don't have an account? Create Account"
+          onPress={() => {
+            this.props.navigation.navigate('CreateAccount');
+          }}
+        />
       </View>
     );
   }

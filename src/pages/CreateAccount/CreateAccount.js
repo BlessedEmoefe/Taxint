@@ -10,11 +10,18 @@ import BottomComponent from '../../component/BottomComponent/BottomComponent';
 
 class CreateAccount extends Component {
   state = {
-    text: '',
+    name: '',
+    email: '',
+    password: '',
   };
-
-  handleChange = () => {
-    console.log('hello');
+  handleNameChange = name => {
+    this.setState({name: name});
+  };
+  handleEmailChange = email => {
+    this.setState({email: email});
+  };
+  handlePasswordChange = password => {
+    this.setState({password: password});
   };
 
   render() {
@@ -24,30 +31,39 @@ class CreateAccount extends Component {
           <TaxintAndLogo />
           <Input
             placeholder="Full Name"
-            onChangeText={event => {
-              this.setState({text: event.target.value});
-            }}
-            value={this.state.text}
-            autoCompleteType="email"
+            onChangeText={this.handleNameChange}
+            value={this.state.name}
           />
           <Input
             placeholder="Email"
-            value={this.state.text}
-            onChangeText={this.handleChange}
+            value={this.state.email}
+            onChangeText={this.handleEmailChange}
+            autoCompleteType="email"
           />
           <Input
             placeholder="Password"
-            value={this.state.text}
-            onChangeText={this.handleChange}
+            value={this.state.password}
+            onChangeText={this.handlePasswordChange}
           />
 
           <Text>
             {Input.value ? 'Click Create Account' : 'fill in the blank spaces'}
           </Text>
           <ButtonComponent title="Create Account" />
-          <Text style={styles.subtext}>Already have an account? Login</Text>
+          <Text
+            style={styles.subtext}
+            onPress={() => {
+              this.props.navigation.navigate('SignIn');
+            }}>
+            Already have an account? Login
+          </Text>
         </View>
-        <BottomComponent text="Already Have an Account? Login" />
+        <BottomComponent
+          text="Already Have an Account? Login"
+          onPress={() => {
+            this.props.navigation.navigate('SignIn');
+          }}
+        />
       </View>
     );
   }
