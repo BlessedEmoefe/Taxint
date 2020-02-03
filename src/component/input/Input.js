@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, TextInput} from 'react-native';
 
 class Input extends Component {
-  //   state: {};
+  state = {};
 
   render() {
     return (
